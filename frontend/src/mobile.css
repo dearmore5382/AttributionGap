@@ -11,6 +11,44 @@
 .pill.mismatch, .pill.unclear { background: #ffe9e7; color: #b83d35; }
 .assess { width: 100%; margin-bottom: 9px; padding: 12px 14px; border: 0; border-radius: 8px; background: #dff7ec; color: #126c49; font-weight: 700; }
 .assess:disabled, .register:disabled, .wallet:disabled { opacity: .55; cursor: not-allowed; }
+.brand-button { border: 0; padding: 0; background: transparent; color: inherit; text-align: left; }
+.top-actions nav { display: flex; gap: 5px; padding: 4px; border: 1px solid #35404d; border-radius: 9px; }
+.top-actions nav button { padding: 7px 10px; border: 0; border-radius: 6px; background: transparent; color: #9ca8b8; font-size: 12px; font-weight: 700; }
+.top-actions nav button.selected { background: #2d3947; color: #fff; }
+.register-page { flex: 1; display: grid; grid-template-columns: minmax(280px, .72fr) minmax(600px, 1.45fr); gap: 50px; width: min(1180px, calc(100% - 64px)); margin: 0 auto; padding: 58px 0 70px; }
+.register-intro { padding: 20px 0; }
+.register-intro h1 { margin: 18px 0 24px; font-size: clamp(38px, 4vw, 58px); line-height: 1.02; letter-spacing: -.05em; }
+.register-intro > p:not(.eyebrow) { margin: 0; color: #66717e; font-size: 16px; line-height: 1.75; }
+.guardrail { display: flex; gap: 13px; margin-top: 34px; padding: 18px; border: 1px solid #cde6dc; border-radius: 11px; background: #edf9f4; color: #176d50; }
+.guardrail svg { flex: 0 0 auto; }
+.guardrail div { display: flex; flex-direction: column; gap: 5px; }
+.guardrail b { font-size: 14px; }
+.guardrail span { color: #50766a; font-size: 12px; line-height: 1.5; }
+.registration-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 34px; border: 1px solid #d7dce3; border-top: 4px solid #ff8a42; border-radius: 14px; background: #fff; box-shadow: 0 18px 60px rgba(27,36,48,.08); }
+.form-heading,.wide,.form-divider,.artifact-block,.form-actions,.registration-form output { grid-column: 1 / -1; }
+.form-heading { display: flex; align-items: end; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #e3e7ec; }
+.form-heading span,.form-divider span { font: 500 11px DM Mono; letter-spacing: .13em; color: #9b6570; }
+.form-heading h2 { margin: 5px 0 0; font-size: 28px; }
+.form-heading > b { color: #7c8794; font-size: 12px; }
+.registration-form label { display: grid; gap: 8px; color: #384452; font-size: 14px; font-weight: 700; }
+.registration-form input,.registration-form textarea { width: 100%; border: 1px solid #ced5dd; border-radius: 8px; padding: 13px 14px; background: #fbfcfd; color: #17202d; font: 13px DM Mono; outline: none; }
+.registration-form input:focus,.registration-form textarea:focus { border-color: #f47a39; box-shadow: 0 0 0 3px rgba(244,122,57,.12); background: #fff; }
+.registration-form textarea { min-height: 92px; resize: vertical; line-height: 1.55; }
+.field-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-divider { display: flex; align-items: center; gap: 14px; margin-top: 5px; }
+.form-divider:after { content: ''; height: 1px; background: #e2e6eb; flex: 1; }
+.artifact-block { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; padding: 20px; border: 1px solid #dce1e7; border-radius: 10px; background: #f7f8fa; }
+.artifact-title { grid-column: 1 / -1; display: flex; align-items: center; gap: 11px; }
+.artifact-title svg { color: #f17132; }
+.artifact-title div { display: flex; flex-direction: column; }
+.artifact-title b { font-size: 15px; }
+.artifact-title span { color: #7f8a97; font-size: 12px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; padding-top: 8px; }
+.cancel,.submit-release { border: 0; border-radius: 8px; padding: 13px 18px; font-weight: 800; }
+.cancel { background: #edf0f3; color: #4d5967; }
+.submit-release { display: flex; align-items: center; gap: 8px; background: #ff8a42; color: #15202c; }
+.submit-release:disabled { opacity: .58; cursor: not-allowed; }
+.registration-form output { min-height: 20px; color: #697482; font: 12px DM Mono; }
 
 @media (max-width: 720px) {
   header,
@@ -21,4 +59,16 @@
   .brand span,
   .network { display: none; }
   .wallet { padding: 10px 11px; white-space: nowrap; font-size: 13px; }
+  .top-actions nav { display: none; }
+  .register-page { display: block; width: auto; padding: 28px 18px 46px; }
+  .register-intro { padding: 0 0 26px; }
+  .register-intro h1 { font-size: 36px; }
+  .registration-form { display: block; padding: 22px 16px; }
+  .registration-form > * { margin-bottom: 18px; }
+  .field-row,.artifact-block { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .artifact-title { grid-column: auto; }
+  .form-heading { align-items: flex-start; }
+  .form-heading > b { display: none; }
+  .form-actions { flex-direction: column-reverse; }
+  .form-actions button { justify-content: center; width: 100%; }
 }
