@@ -1,0 +1,10 @@
+@media (max-width: 720px) {
+  header,
+  .commandbar { padding-left: 14px; padding-right: 14px; }
+  .brand { gap: 9px; min-width: 0; }
+  .brand img { width: 44px; height: 44px; }
+  .brand b { font-size: 16px; white-space: nowrap; }
+  .brand span,
+  .network { display: none; }
+  .wallet { padding: 10px 11px; white-space: nowrap; font-size: 13px; }
+}
