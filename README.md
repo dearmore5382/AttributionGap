@@ -18,6 +18,7 @@ The semantic model returns package observations only. It cannot choose the final
 
 ## Verified StudioNet deployment
 
+- Live DApp: [attribution-gap.dearmorescheuer5382.workers.dev](https://attribution-gap.dearmorescheuer5382.workers.dev)
 - Contract: [`0x217A62942c968665f2bbF3478434f4a644369723`](https://explorer-studio.genlayer.com/address/0x217A62942c968665f2bbF3478434f4a644369723)
 - Deployed/source SHA-256: `79c6a76e407f353f35f62a12d43c138dc22ab6acc632790e7acf5482d5b06ede`
 - Direct Mode: **12 passed**
