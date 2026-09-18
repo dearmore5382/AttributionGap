@@ -12,8 +12,8 @@
 
 Fixture commit: `1b4fa7cd039c3b62d5444c2b06de19d98f6a0158`.
 
-The manifest records exact local bytes, lengths and SHA-256 values. It is not yet public evidence. Before deployment, set the final GitHub repository identity, push this commit, construct Raw GitHub URLs from the full commit SHA, fetch them independently, and update `public_raw_preflight` only after every returned byte sequence matches this manifest.
+The manifest records exact bytes, lengths, SHA-256 values and Raw GitHub URLs. All five public URLs at the full fixture commit were independently fetched on 2026-09-18; each returned HTTP 200 and matched both the recorded byte length and SHA-256.
 
 ## Deployment blocker
 
-Do not deploy yet. Public Raw GitHub preflight cannot be completed until the final repository URL is known and the locked fixture commit is pushed.
+No source-side pre-deployment blocker remains. Deploy only the exact contract source whose SHA-256 is recorded after the final test/build pass, then verify deployed-source parity before sending lifecycle transactions.

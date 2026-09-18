@@ -18,4 +18,4 @@ The semantic model returns package observations only. It cannot choose the final
 
 ## Status
 
-Pre-deployment build. Do not submit a contract address or enable frontend writes until local Direct Mode, public fixture preflight, deployed-source parity and the complete StudioNet live matrix pass.
+Pre-deployment build. Direct Mode and public Raw GitHub fixture preflight pass. Do not submit a contract address or enable frontend writes until deployed-source parity and the complete StudioNet live matrix pass.

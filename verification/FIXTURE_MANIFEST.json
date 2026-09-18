@@ -1,12 +1,13 @@
 {
   "fixture_commit": "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
-  "repository": "PENDING_REMOTE_REPOSITORY",
-  "public_raw_preflight": false,
+  "repository": "dearmore5382/AttributionGap",
+  "public_raw_preflight": true,
+  "preflight_status": "HTTP_200_EXACT_BYTES_AND_SHA256_MATCH",
   "files": {
-    "fixtures/sbom-complete.json": {"bytes": 146, "sha256": "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92"},
-    "fixtures/notice-complete.md": {"bytes": 240, "sha256": "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb"},
-    "fixtures/notice-missing.md": {"bytes": 168, "sha256": "2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3"},
-    "fixtures/notice-wrong-license.md": {"bytes": 126, "sha256": "3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a"},
-    "fixtures/notice-prompt-injection.md": {"bytes": 115, "sha256": "e8860d187e907038b3d53be1fd50449263d85c977a66d54a113fa275598bdcbc"}
+    "fixtures/sbom-complete.json": {"url": "https://raw.githubusercontent.com/dearmore5382/AttributionGap/1b4fa7cd039c3b62d5444c2b06de19d98f6a0158/fixtures/sbom-complete.json", "http_status": 200, "bytes": 146, "sha256": "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92"},
+    "fixtures/notice-complete.md": {"url": "https://raw.githubusercontent.com/dearmore5382/AttributionGap/1b4fa7cd039c3b62d5444c2b06de19d98f6a0158/fixtures/notice-complete.md", "http_status": 200, "bytes": 240, "sha256": "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb"},
+    "fixtures/notice-missing.md": {"url": "https://raw.githubusercontent.com/dearmore5382/AttributionGap/1b4fa7cd039c3b62d5444c2b06de19d98f6a0158/fixtures/notice-missing.md", "http_status": 200, "bytes": 168, "sha256": "2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3"},
+    "fixtures/notice-wrong-license.md": {"url": "https://raw.githubusercontent.com/dearmore5382/AttributionGap/1b4fa7cd039c3b62d5444c2b06de19d98f6a0158/fixtures/notice-wrong-license.md", "http_status": 200, "bytes": 126, "sha256": "3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a"},
+    "fixtures/notice-prompt-injection.md": {"url": "https://raw.githubusercontent.com/dearmore5382/AttributionGap/1b4fa7cd039c3b62d5444c2b06de19d98f6a0158/fixtures/notice-prompt-injection.md", "http_status": 200, "bytes": 115, "sha256": "e8860d187e907038b3d53be1fd50449263d85c977a66d54a113fa275598bdcbc"}
   }
 }
