@@ -1,0 +1,467 @@
+{
+  "contract": "0x217A62942c968665f2bbF3478434f4a644369723",
+  "source_sha256": "79c6a76e407f353f35f62a12d43c138dc22ab6acc632790e7acf5482d5b06ede",
+  "fixture_commit": "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+  "started_at": "2026-09-18T08:37:29.070980+00:00",
+  "wallets": [
+    "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+    "0xA63DE24e30C88FB1019E8956654730316e36eDBE"
+  ],
+  "steps": [
+    {
+      "id": "F1-invalid-commit",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Invalid",
+        "dearmore5382",
+        "AttributionGap",
+        "main",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-complete.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "INVALID_SOURCE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x4150820e60b978df7a24e9bf5ea5ea65051de1df5b12d37f4a270dff4244fc8e",
+      "actual": "INVALID_SOURCE",
+      "readback": {
+        "count": 0
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4150820e60b978df7a24e9bf5ea5ea65051de1df5b12d37f4a270dff4244fc8e"
+    },
+    {
+      "id": "H1-register-complete",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Complete release",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-complete.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "0"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x538fa874c6eb525004538efc61f11e31ba7882e96763d4fdf1f732c0af28208c",
+      "actual": "0",
+      "readback": {
+        "count": 1,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x538fa874c6eb525004538efc61f11e31ba7882e96763d4fdf1f732c0af28208c"
+    },
+    {
+      "id": "F2-duplicate-release",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Duplicate",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-complete.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "DUPLICATE_RELEASE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x7263ab93c0f7f7bf5dca3cd322222cbc00fd5990b4810e582d3b76ac829967e2",
+      "actual": "DUPLICATE_RELEASE",
+      "readback": {
+        "count": 1,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x7263ab93c0f7f7bf5dca3cd322222cbc00fd5990b4810e582d3b76ac829967e2"
+    },
+    {
+      "id": "H2-assess-complete",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "NOTICE_COMPLETE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xf27482ef8b1c9473f5e0adc3d6f88634f3c63e314adff0c0b88833364c0a9239",
+      "actual": "NOTICE_COMPLETE",
+      "readback": {
+        "count": 1,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xf27482ef8b1c9473f5e0adc3d6f88634f3c63e314adff0c0b88833364c0a9239"
+    },
+    {
+      "id": "F3-assessment-replay",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        0
+      ],
+      "allowed": [
+        "AUDIT_NOT_ASSESSABLE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x429bf561793ae0c91e91789f9ddadcb84f976e47fe36fa7aeab4fe11a35f78ba",
+      "actual": "AUDIT_NOT_ASSESSABLE",
+      "readback": {
+        "count": 1,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x429bf561793ae0c91e91789f9ddadcb84f976e47fe36fa7aeab4fe11a35f78ba"
+    },
+    {
+      "id": "H3-register-missing",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Missing attribution",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-missing.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "1"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x8221570e03fe592344401e2e9072080c702a3ba027296bd22abfa12c82d7c0fa",
+      "actual": "1",
+      "readback": {
+        "count": 2,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x8221570e03fe592344401e2e9072080c702a3ba027296bd22abfa12c82d7c0fa"
+    },
+    {
+      "id": "H4-assess-missing",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        1
+      ],
+      "allowed": [
+        "ATTRIBUTION_GAPS"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x173eb99cd6519d301b56bfcf3e5c1c87f38787cff3726f8b7c2c4b5e09e94e35",
+      "actual": "ATTRIBUTION_GAPS",
+      "readback": {
+        "count": 2,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x173eb99cd6519d301b56bfcf3e5c1c87f38787cff3726f8b7c2c4b5e09e94e35"
+    },
+    {
+      "id": "H5-register-wrong-license",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Wrong license",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-wrong-license.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "2"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x6301c44c1987f5e763aad5cc4191c064ad17baa44aa6a83c71dd966b68aa5112",
+      "actual": "2",
+      "readback": {
+        "count": 3,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x6301c44c1987f5e763aad5cc4191c064ad17baa44aa6a83c71dd966b68aa5112"
+    },
+    {
+      "id": "H6-assess-wrong-license",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        2
+      ],
+      "allowed": [
+        "LICENSE_MISMATCH"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x22af8310d52950ed7e6de6abbc3cd5b8c7ba41a9bc4f1d0cfe3f969ad8277730",
+      "actual": "LICENSE_MISMATCH",
+      "readback": {
+        "count": 3,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x22af8310d52950ed7e6de6abbc3cd5b8c7ba41a9bc4f1d0cfe3f969ad8277730"
+    },
+    {
+      "id": "H7-register-false-digest",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "False digest",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-complete.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "3"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x67b77abf5a460d1ccd98dfdd2f7d5dbb6e23b084ec2695b8593327bb40e9b695",
+      "actual": "3",
+      "readback": {
+        "count": 4,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x67b77abf5a460d1ccd98dfdd2f7d5dbb6e23b084ec2695b8593327bb40e9b695"
+    },
+    {
+      "id": "H8-assess-false-digest",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        3
+      ],
+      "allowed": [
+        "INTEGRITY_FAILURE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xd859e65758ff41e681bb36c131d196800ed0e240b9378749fbb1439d68c0ec12",
+      "actual": "INTEGRITY_FAILURE",
+      "readback": {
+        "count": 4,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd859e65758ff41e681bb36c131d196800ed0e240b9378749fbb1439d68c0ec12"
+    },
+    {
+      "id": "H9-register-dead-source",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Unavailable source",
+        "dearmore5382",
+        "AttributionGap",
+        "1b4fa7cd039c3b62d5444c2b06de19d98f6a0158",
+        "fixtures/sbom-complete.json",
+        "fixtures/does-not-exist.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "4"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x82cb1b94fcd8d9cd966900dd3a64f0e5c293d7f7697163576d433bf8748d2c46",
+      "actual": "4",
+      "readback": {
+        "count": 5,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x82cb1b94fcd8d9cd966900dd3a64f0e5c293d7f7697163576d433bf8748d2c46"
+    },
+    {
+      "id": "F4-assess-dead-source",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        4
+      ],
+      "allowed": [
+        "ASSESSMENT_RETRYABLE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x4629d4b0bd50953ebde866b2d4a3dc66aee20b3f517275e4c7a793dd818bae5e",
+      "actual": "ASSESSMENT_RETRYABLE",
+      "readback": {
+        "count": 5,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4629d4b0bd50953ebde866b2d4a3dc66aee20b3f517275e4c7a793dd818bae5e"
+    },
+    {
+      "id": "H10-register-remediation",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "register_release",
+      "args": [
+        "Remediated release",
+        "dearmore5382",
+        "AttributionGap",
+        "687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4",
+        "fixtures/sbom-complete.json",
+        "fixtures/notice-complete.md",
+        "df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92",
+        "c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb",
+        "Every SBOM package must have a semantically matching name and declared license in the notice."
+      ],
+      "allowed": [
+        "5"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xd0fad3f411731cf832b6d489dadce0e9e8bfddf09166735e4c95626903381575",
+      "actual": "5",
+      "readback": {
+        "count": 6,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}",
+        "audit5": "{\"commit\": \"687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 5, \"label\": \"Remediated release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd0fad3f411731cf832b6d489dadce0e9e8bfddf09166735e4c95626903381575"
+    },
+    {
+      "id": "H11-assess-remediation",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "assess_release",
+      "args": [
+        5
+      ],
+      "allowed": [
+        "NOTICE_COMPLETE"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xfc742496e8ad4f53c9a35fe8c072dae7f7522558159ad6f18dda92301ff48ac2",
+      "actual": "NOTICE_COMPLETE",
+      "readback": {
+        "count": 6,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}",
+        "audit5": "{\"commit\": \"687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 5, \"label\": \"Remediated release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xfc742496e8ad4f53c9a35fe8c072dae7f7522558159ad6f18dda92301ff48ac2"
+    },
+    {
+      "id": "F5-outsider-link",
+      "actor": "0xA63DE24e30C88FB1019E8956654730316e36eDBE",
+      "method": "link_remediation",
+      "args": [
+        1,
+        5
+      ],
+      "allowed": [
+        "CREATOR_ONLY"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xd5d30b6e0cdbe884c585ec0f8ddb134bca9bf8f81d2de65bd9d1547eabbfb350",
+      "actual": "CREATOR_ONLY",
+      "readback": {
+        "count": 6,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}",
+        "audit5": "{\"commit\": \"687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 5, \"label\": \"Remediated release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd5d30b6e0cdbe884c585ec0f8ddb134bca9bf8f81d2de65bd9d1547eabbfb350"
+    },
+    {
+      "id": "H12-link-remediation",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "link_remediation",
+      "args": [
+        1,
+        5
+      ],
+      "allowed": [
+        "REMEDIATION_LINKED"
+      ],
+      "status": "VERIFIED",
+      "hash": "0xd8d99eba35ea5ebb80be348f6ade792aaf0ce969892baaf7728de7e0e023f377",
+      "actual": "REMEDIATION_LINKED",
+      "readback": {
+        "count": 6,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 6, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}",
+        "audit5": "{\"commit\": \"687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 5, \"label\": \"Remediated release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd8d99eba35ea5ebb80be348f6ade792aaf0ce969892baaf7728de7e0e023f377"
+    },
+    {
+      "id": "F6-link-replay",
+      "actor": "0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB",
+      "method": "link_remediation",
+      "args": [
+        1,
+        5
+      ],
+      "allowed": [
+        "SUCCESSOR_ALREADY_LINKED"
+      ],
+      "status": "VERIFIED",
+      "hash": "0x32c1bda204fabe87e6dfcdc9d6ec65869d7b28937e829f005bd4846fffc6fc1f",
+      "actual": "SUCCESSOR_ALREADY_LINKED",
+      "readback": {
+        "count": 6,
+        "audit0": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 0, \"label\": \"Complete release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}",
+        "audit1": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 1, \"label\": \"Missing attribution\", \"notice_path\": \"fixtures/notice-missing.md\", \"notice_sha256\": \"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MISSING\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"2af7837182ca18b79d2d908f3b363cb9c2378e1242df2877aa6e97c3730e9ef3\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 6, \"verdict\": \"ATTRIBUTION_GAPS\"}",
+        "audit2": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 2, \"label\": \"Wrong license\", \"notice_path\": \"fixtures/notice-wrong-license.md\", \"notice_sha256\": \"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\", \"observation\": \"{\\\"coverage\\\":[\\\"MISMATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"3d204d3ef60ac592a1ff879cafa6a047198cde07190b0c9c461c7c91359aac5a\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"LICENSE_MISMATCH\"}",
+        "audit3": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 3, \"label\": \"False digest\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"0000000000000000000000000000000000000000000000000000000000000000\", \"observation\": \"{\\\"coverage\\\":[],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"INTEGRITY_FAILURE\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"INTEGRITY_FAILURE\"}",
+        "audit4": "{\"commit\": \"1b4fa7cd039c3b62d5444c2b06de19d98f6a0158\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 4, \"label\": \"Unavailable source\", \"notice_path\": \"fixtures/does-not-exist.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"REGISTERED\", \"successor_plus_one\": 0, \"verdict\": \"UNEVALUATED\"}",
+        "audit5": "{\"commit\": \"687f8a4730b55d6a1bbe4109c89cf6998cfa2bb4\", \"creator\": \"0x736A168247e3f0C52F7907c9a8fDac572DF9c8bB\", \"id\": 5, \"label\": \"Remediated release\", \"notice_path\": \"fixtures/notice-complete.md\", \"notice_sha256\": \"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\", \"observation\": \"{\\\"coverage\\\":[\\\"MATCH\\\",\\\"MATCH\\\",\\\"MATCH\\\"],\\\"notice_sha256\\\":\\\"c8ee3ad54394b38ddf02997116d5c179b9853c35f7da2b8f145b12b1d448c9fb\\\",\\\"packages\\\":[{\\\"license\\\":\\\"MIT\\\",\\\"name\\\":\\\"tiny-router\\\"},{\\\"license\\\":\\\"Apache-2.0\\\",\\\"name\\\":\\\"safe-parser\\\"},{\\\"license\\\":\\\"BSD-3-Clause\\\",\\\"name\\\":\\\"color-kit\\\"}],\\\"sbom_sha256\\\":\\\"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\\\",\\\"status\\\":\\\"VERIFIED\\\"}\", \"repository\": \"dearmore5382/AttributionGap\", \"sbom_path\": \"fixtures/sbom-complete.json\", \"sbom_sha256\": \"df2289afe23b32612aba6df607515472d6315bcd83664726ea7b2175c7c3eb92\", \"status\": \"FINALIZED\", \"successor_plus_one\": 0, \"verdict\": \"NOTICE_COMPLETE\"}"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x32c1bda204fabe87e6dfcdc9d6ec65869d7b28937e829f005bd4846fffc6fc1f"
+    }
+  ],
+  "complete": true,
+  "completed_at": "2026-09-18T08:54:16.477596+00:00"
+}

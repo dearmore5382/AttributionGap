@@ -1,0 +1,114 @@
+{
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "contract": "0x217A62942c968665f2bbF3478434f4a644369723",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x217A62942c968665f2bbF3478434f4a644369723",
+  "source_sha256": "79c6a76e407f353f35f62a12d43c138dc22ab6acc632790e7acf5482d5b06ede",
+  "expected_source_sha256": "79c6a76e407f353f35f62a12d43c138dc22ab6acc632790e7acf5482d5b06ede",
+  "exact_source_parity": true,
+  "initial_count": "0",
+  "public_methods": [
+    "assess_release",
+    "get_audit",
+    "get_count",
+    "link_remediation",
+    "register_release"
+  ],
+  "schema": {
+    "ctor": {
+      "params": [],
+      "kwparams": {}
+    },
+    "methods": {
+      "assess_release": {
+        "params": [
+          [
+            "audit_id",
+            "int"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      },
+      "get_audit": {
+        "params": [
+          [
+            "audit_id",
+            "int"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "get_count": {
+        "params": [],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "link_remediation": {
+        "params": [
+          [
+            "earlier_id",
+            "int"
+          ],
+          [
+            "successor_id",
+            "int"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      },
+      "register_release": {
+        "params": [
+          [
+            "label",
+            "string"
+          ],
+          [
+            "owner",
+            "string"
+          ],
+          [
+            "repository",
+            "string"
+          ],
+          [
+            "commit",
+            "string"
+          ],
+          [
+            "sbom_path",
+            "string"
+          ],
+          [
+            "notice_path",
+            "string"
+          ],
+          [
+            "sbom_sha256",
+            "string"
+          ],
+          [
+            "notice_sha256",
+            "string"
+          ],
+          [
+            "policy",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "any",
+        "payable": false
+      }
+    }
+  }
+}

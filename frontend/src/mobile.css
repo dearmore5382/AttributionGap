@@ -1,3 +1,17 @@
+.regbox summary {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px; border: 1px solid #ffd1b2; border-radius: 8px;
+  background: #fff3e8; color: #c45522; font-size: 13px; font-weight: 700;
+  cursor: pointer; list-style: none;
+}
+.regbox summary::-webkit-details-marker { display: none; }
+.regbox form { display: grid; gap: 7px; margin-top: 9px; }
+.regbox input { width: 100%; min-width: 0; padding: 9px; border: 1px solid #d8dde4; border-radius: 7px; font: 10px DM Mono; }
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.pill.mismatch, .pill.unclear { background: #ffe9e7; color: #b83d35; }
+.assess { width: 100%; margin-bottom: 9px; padding: 12px 14px; border: 0; border-radius: 8px; background: #dff7ec; color: #126c49; font-weight: 700; }
+.assess:disabled, .register:disabled, .wallet:disabled { opacity: .55; cursor: not-allowed; }
+
 @media (max-width: 720px) {
   header,
   .commandbar { padding-left: 14px; padding-right: 14px; }

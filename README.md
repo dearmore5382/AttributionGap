@@ -16,6 +16,13 @@ The contract does not accept arbitrary evidence URLs. It constructs Raw GitHub U
 
 The semantic model returns package observations only. It cannot choose the final verdict, alter sealed source identity, or promote an audit. Remediation creates a successor link instead of overwriting history.
 
-## Status
+## Verified StudioNet deployment
 
-Pre-deployment build. Direct Mode and public Raw GitHub fixture preflight pass. Do not submit a contract address or enable frontend writes until deployed-source parity and the complete StudioNet live matrix pass.
+- Contract: [`0x217A62942c968665f2bbF3478434f4a644369723`](https://explorer-studio.genlayer.com/address/0x217A62942c968665f2bbF3478434f4a644369723)
+- Deployed/source SHA-256: `79c6a76e407f353f35f62a12d43c138dc22ab6acc632790e7acf5482d5b06ede`
+- Direct Mode: **12 passed**
+- StudioNet live lifecycle: **18/18 verified**, including complete coverage, missing attribution, license mismatch, digest substitution, unavailable-source retry behavior, replay protection and authorized remediation.
+- Human-readable transaction evidence: [`verification/LIVE_RESULTS.md`](verification/LIVE_RESULTS.md)
+- Machine-readable journal: [`verification/live-0x217a62942c968665f2bbf3478434f4a644369723.json`](verification/live-0x217a62942c968665f2bbf3478434f4a644369723.json)
+
+The frontend reads finalized audit records from this contract and exposes wallet-backed registration and assessment writes. Transactions are submitted once; the UI never silently retries a signed write.
